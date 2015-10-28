@@ -3,6 +3,7 @@
 
 %{
 #include "RustyFist/RustyFist.h"
+#include "RustyFist/RustyTest.h"
 %}
 
 %include std_string.i
@@ -19,3 +20,4 @@
 }
 
 %include "RustyFist/RustyFist.h"
+%include "RustyFist/RustyTest.h"

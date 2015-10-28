@@ -4,16 +4,11 @@ namespace LostFoot
 {
 	public class MainClass
 	{
-		public MainClass ()
-		{
-		}
-
 		public static void Main(){
-			RustyFist rf = new RustyFist();
-
+			RustyFist rf = new RustyFist ();
+			RustyImpl ri = new RustyImpl ();
+			rf.setTest (ri);
 			rf.test ();
-
-			Console.WriteLine("Lost Foot");
 		}
 	}
 }
