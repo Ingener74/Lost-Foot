@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostFoot", "LostFoot\LostFoot.csproj", "{FAED4949-4A15-4F75-8106-8A9628FEFAF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{355F1DB0-FF97-4820-ABDD-A36211343727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetRow", "PlanetRow\PlanetRow.csproj", "{07820FD3-14DE-40CB-952F-429D9EE87B2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07820FD3-14DE-40CB-952F-429D9EE87B2F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{07820FD3-14DE-40CB-952F-429D9EE87B2F}.Debug|x86.Build.0 = Debug|Any CPU
+		{07820FD3-14DE-40CB-952F-429D9EE87B2F}.Release|x86.ActiveCfg = Release|Any CPU
+		{07820FD3-14DE-40CB-952F-429D9EE87B2F}.Release|x86.Build.0 = Release|Any CPU
+		{FAED4949-4A15-4F75-8106-8A9628FEFAF5}.Debug|x86.ActiveCfg = Debug|x86
+		{FAED4949-4A15-4F75-8106-8A9628FEFAF5}.Debug|x86.Build.0 = Debug|x86
+		{FAED4949-4A15-4F75-8106-8A9628FEFAF5}.Release|x86.ActiveCfg = Release|x86
+		{FAED4949-4A15-4F75-8106-8A9628FEFAF5}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = LostFoot\LostFoot.csproj
+	EndGlobalSection
+EndGlobal
