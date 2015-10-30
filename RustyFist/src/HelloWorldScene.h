@@ -10,10 +10,8 @@ public:
 
     static cocos2d::Scene* scene();
 
-    // a selector callback
     void menuCloseCallback(Ref* sender);
 
-    // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
 };
 

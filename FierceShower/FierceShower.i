@@ -4,6 +4,7 @@
 %{
 #include "RustyFist/RustyFist.h"
 #include "RustyFist/GameLogic.h"
+#include "RustyFist/DrawMe.h"
 %}
 
 %include std_string.i
@@ -21,3 +22,4 @@
 
 %include "RustyFist/RustyFist.h"
 %include "RustyFist/GameLogic.h"
+%include "RustyFist/DrawMe.h"

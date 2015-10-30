@@ -4,11 +4,13 @@
 #include "cocos2d.h"
 
 class GameLogic;
+class DrawMe;
+class TestIntPtr;
 
 class  AppDelegate : private cocos2d::Application
 {
 public:
-    AppDelegate(GameLogic* = nullptr);
+    AppDelegate(GameLogic* = nullptr, DrawMe* = nullptr);
     virtual ~AppDelegate();
 
     virtual void initGLContextAttrs();
@@ -18,7 +20,9 @@ public:
     virtual void applicationWillEnterForeground();
 
 private:
-    GameLogic* _gameLogic;
+    GameLogic* _gameLogic = nullptr;
+    DrawMe* _drawMe = nullptr;
+    TestIntPtr* _testIntPtr = nullptr;
 };
 
 #endif // _APP_DELEGATE_H_

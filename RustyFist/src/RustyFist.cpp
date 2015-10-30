@@ -19,6 +19,6 @@ RustyFist::~RustyFist()
 
 int RustyFist::run()
 {
-    AppDelegate app{_gameLogic};
+    AppDelegate app{_gameLogic, _drawMe};
     return Application::getInstance()->run();
 }

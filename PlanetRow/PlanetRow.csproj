@@ -44,6 +44,15 @@
     <Compile Include="..\build\FierceShower\RustyFist.cs">
       <Link>RustyFist.cs</Link>
     </Compile>
+    <Compile Include="..\build\FierceShower\DrawMe.cs">
+      <Link>DrawMe.cs</Link>
+    </Compile>
+    <Compile Include="..\build\FierceShower\SWIGTYPE_p_void.cs">
+      <Link>SWIGTYPE_p_void.cs</Link>
+    </Compile>
+    <Compile Include="..\build\FierceShower\TestIntPtr.cs">
+      <Link>TestIntPtr.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

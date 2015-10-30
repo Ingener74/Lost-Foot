@@ -1,11 +1,16 @@
 cmake_minimum_required(VERSION 3.0)
 
 set(SOURCES
-	include/RustyFist/RustyFist.h
+    include/RustyFist/RustyFist.h
     include/RustyFist/GameLogic.h
+    include/RustyFist/DrawMe.h
 
     src/RustyFist.cpp
     src/GameLogic.cpp
+    src/DrawMe.cpp
+    
+    src/OpenGLLayer.cpp
+    src/OpenGLLayer.h
     
     src/AppDelegate.cpp
     src/AppDelegate.h

@@ -6,13 +6,17 @@
 
 #include "HelloWorldScene.h"
 #include "AppMacros.h"
+
 #include "RustyFist/GameLogic.h"
+#include "RustyFist/DrawMe.h"
+#include "OpenGLLayer.h"
 
 USING_NS_CC;
 using namespace std;
 
-AppDelegate::AppDelegate(GameLogic* gameLogic) :
-    _gameLogic(gameLogic) {
+AppDelegate::AppDelegate(GameLogic* gameLogic, DrawMe* drawMe) :
+	_gameLogic(gameLogic), _drawMe(drawMe)
+{
 }
 
 AppDelegate::~AppDelegate() {
@@ -24,12 +28,39 @@ void AppDelegate::initGLContextAttrs() {
     GLView::setGLContextAttrs(glContextAttrs);
 }
 
+class ImplTestIntPtr: public TestIntPtr
+{
+public:
+	ImplTestIntPtr()
+	{
+	}
+	virtual ~ImplTestIntPtr()
+	{
+	}
+	virtual void * getContext()
+	{
+		GLFWwindow* context = glfwGetCurrentContext();
+		cout << "out context " << context << endl;
+		return context;
+	}
+	virtual void * getAddress(const std::string& name)
+	{
+		void* procAddress = reinterpret_cast<void*>(glfwGetProcAddress(name.c_str()));
+		cout << procAddress << " GetProcAddress for " << name << endl;
+		return procAddress;
+	}
+};
+
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
+
+    GLViewImpl* glViewImpl = nullptr;
+
     if (!glview) {
-        glview = GLViewImpl::create("Cpp Empty Test");
+    	glViewImpl = GLViewImpl::create("Cpp Empty Test");
+        glview = glViewImpl;
         director->setOpenGLView(glview);
     }
 
@@ -73,19 +104,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
                 smallResource.size.width / designResolutionSize.width));
     }
 
-    // current directory
-    // /home/pavel/workspace/Lost-Foot/LostFoot/bin/Debug
-
-    // /home/pavel/workspace/Lost-Foot/RustyFist/Resources
-    // /home/pavel/workspace/Lost-Foot/RustyFist/Resources/ipad
-
-/*
-    searchPath.push_back("../../../RustyFist/Resources");
-    searchPath.push_back("../../../RustyFist/Resources/ipad");
-*/
-
-    searchPath.push_back("/home/pavel/workspace/Lost-Foot/RustyFist/Resources");
-    searchPath.push_back("/home/pavel/workspace/Lost-Foot/RustyFist/Resources/ipad");
+    searchPath.push_back("/home/pavel/Workspace/Lost-Foot/RustyFist/Resources");
+    searchPath.push_back("/home/pavel/Workspace/Lost-Foot/RustyFist/Resources/ipad");
 
     for (auto i : searchPath)
         cout << i << endl;
@@ -100,12 +120,18 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::scene();
+//    auto scene = HelloWorld::scene();
+
+    auto scene = OpenGLLayer::scene(_drawMe);
 
     _gameLogic->doSomething("Дай пять");
 
     // run
     director->runWithScene(scene);
+
+	_testIntPtr = new ImplTestIntPtr;
+	if (_drawMe)
+		_drawMe->init(_testIntPtr);
 
     return true;
 }

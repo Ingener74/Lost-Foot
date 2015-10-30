@@ -40,4 +40,9 @@
       <Name>PlanetRow</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGLo">
+      <HintPath>..\..\MonoGLo-0.2\lib\MonoGLo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
