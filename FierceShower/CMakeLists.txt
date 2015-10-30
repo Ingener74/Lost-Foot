@@ -12,5 +12,5 @@ set(CMAKE_SWIG_FLAGS "-c++")
 
 SWIG_ADD_MODULE(FierceShower csharp FierceShower.i)
 
-set(SHARED_LIBS RustyFist)
+set(SHARED_LIBS RustyFist cocos2d)
 SWIG_LINK_LIBRARIES(FierceShower ${SHARED_LIBS})

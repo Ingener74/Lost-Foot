@@ -32,7 +32,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="MainClass.cs" />
-    <Compile Include="RustyImpl.cs" />
+    <Compile Include="CSharpGameLogicImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PlanetRow\PlanetRow.csproj">

@@ -1,22 +1,24 @@
 #include <iostream>
 
-#include "RustyFist/RustyTest.h"
+#include <cocos2d.h>
+#include "AppDelegate.h"
+
 #include "RustyFist/RustyFist.h"
+#include "../include/RustyFist/GameLogic.h"
 
 using namespace std;
+using namespace cocos2d;
 
 RustyFist::RustyFist()
 {
-	cout << __PRETTY_FUNCTION__ << endl;
 }
 
 RustyFist::~RustyFist()
 {
-	cout << __PRETTY_FUNCTION__ << endl;
 }
 
-void RustyFist::test()
+int RustyFist::run()
 {
-	if (_test)
-		_test->doSomething("Hello, World!!!");
+    AppDelegate app{_gameLogic};
+    return Application::getInstance()->run();
 }

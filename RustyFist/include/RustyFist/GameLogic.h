@@ -1,16 +1,16 @@
 #pragma once
 
 #ifdef SWIG
-	%feature("director") RustyTest;
+	%feature("director") GameLogic;
 #else
 	#include <string>
 #endif
 
-class RustyTest
+class GameLogic
 {
 public:
-	RustyTest();
-	virtual ~RustyTest();
+	GameLogic();
+	virtual ~GameLogic();
 
 	virtual void doSomething(std::string const&) = 0;
 };

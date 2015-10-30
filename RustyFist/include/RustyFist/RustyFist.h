@@ -1,6 +1,6 @@
 #pragma onse
 
-class RustyTest;
+class GameLogic;
 
 class RustyFist
 {
@@ -8,14 +8,15 @@ public:
 	RustyFist();
 	virtual ~RustyFist();
 
-	void setTest(RustyTest*);
+	void setGameLogic(GameLogic*);
 
-	void test();
+	int run();
+
 private:
-	RustyTest* _test = nullptr;
+	GameLogic* _gameLogic = nullptr;
 };
 
-inline void RustyFist::setTest(RustyTest* t)
+inline void RustyFist::setGameLogic(GameLogic* gameLogic)
 {
-	_test = t;
+	_gameLogic = gameLogic;
 }

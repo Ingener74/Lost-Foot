@@ -2,8 +2,9 @@ using System;
 
 namespace LostFoot
 {
-	public class RustyImpl : RustyTest{
-		public RustyImpl() : base()
+	public class CSharpGameLogicImpl : GameLogic 
+	{
+		public CSharpGameLogicImpl() : base()
 		{
 		}
 
