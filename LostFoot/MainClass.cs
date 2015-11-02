@@ -13,10 +13,14 @@ namespace LostFoot
 
 			CSharpLayerImpl drawLayer = new CSharpLayerImpl ();
 
-			RustyFist rf = new RustyFist ();
+			CSTouchSink touchSink = new CSTouchSink ();
 
+			RustyFist rf = new RustyFist (drawLayer, gameLogic, touchSink);
+
+			/*
 			rf.setDrawLayer (drawLayer);
 			rf.setGameLogic (gameLogic);
+			*/
 
 			rf.run ();
 		}

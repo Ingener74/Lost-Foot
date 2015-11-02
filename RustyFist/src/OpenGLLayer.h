@@ -20,15 +20,24 @@ public:
 
 	virtual bool init() override;
 
-	static cocos2d::Scene* scene(DrawMe*);
+	static cocos2d::Scene* scene(DrawMe*, TouchSink*);
 
 	CREATE_FUNC(OpenGLLayer);
 
 	virtual void draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, uint32_t flags) override;
-	void setDrawMe(DrawMe* drawMe);
+	void setDrawMe(DrawMe*);
+	void setTouchSink(TouchSink*);
 
 private:
+	virtual void onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event *unused_event);
+	virtual void onTouchesMoved(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event *unused_event);
+	virtual void onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event *unused_event);
+	virtual void onTouchesCancelled(const std::vector<cocos2d::Touch*>&touches, cocos2d::Event *unused_event);
+
+	virtual void sendTouch(const std::vector<cocos2d::Touch*>&);
+
 	DrawMe* _drawMe = nullptr;
+	TouchSink* _ts = nullptr;
 };
 
 inline void OpenGLLayer::setDrawMe(DrawMe* drawMe)

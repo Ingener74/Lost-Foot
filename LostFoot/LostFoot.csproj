@@ -34,6 +34,7 @@
     <Compile Include="MainClass.cs" />
     <Compile Include="CSharpGameLogicImpl.cs" />
     <Compile Include="CSharpLayerImpl.cs" />
+    <Compile Include="CSTouchSink.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PlanetRow\PlanetRow.csproj">

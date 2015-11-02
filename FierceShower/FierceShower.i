@@ -5,10 +5,14 @@
 #include "RustyFist/RustyFist.h"
 #include "RustyFist/GameLogic.h"
 #include "RustyFist/DrawMe.h"
+#include "RustyFist/TouchSink.h"
 %}
 
 %include std_string.i
+%include std_vector.i
 %include exception.i
+
+%template(VectorTouch) std::vector<Touch>;
 
 %exception{
     try {
@@ -23,3 +27,4 @@
 %include "RustyFist/RustyFist.h"
 %include "RustyFist/GameLogic.h"
 %include "RustyFist/DrawMe.h"
+%include "RustyFist/TouchSink.h"

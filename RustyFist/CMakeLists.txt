@@ -4,10 +4,12 @@ set(SOURCES
     include/RustyFist/RustyFist.h
     include/RustyFist/GameLogic.h
     include/RustyFist/DrawMe.h
+    include/RustyFist/TouchSink.h
 
     src/RustyFist.cpp
     src/GameLogic.cpp
     src/DrawMe.cpp
+    src/TouchSink.cpp
     
     src/OpenGLLayer.cpp
     src/OpenGLLayer.h

@@ -5,12 +5,12 @@
 
 class GameLogic;
 class DrawMe;
-class TestIntPtr;
+class TouchSink;
 
 class  AppDelegate : private cocos2d::Application
 {
 public:
-    AppDelegate(GameLogic* = nullptr, DrawMe* = nullptr);
+    AppDelegate(GameLogic* = nullptr, DrawMe* = nullptr, TouchSink* = nullptr);
     virtual ~AppDelegate();
 
     virtual void initGLContextAttrs();
@@ -22,6 +22,9 @@ public:
 private:
     GameLogic* _gameLogic = nullptr;
     DrawMe* _drawMe = nullptr;
+    TouchSink* _touchSink = nullptr;
+
+    cocos2d::EventListenerMouse* _mouseEvents = nullptr;
 };
 
 #endif // _APP_DELEGATE_H_

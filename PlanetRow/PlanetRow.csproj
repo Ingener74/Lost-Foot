@@ -47,6 +47,18 @@
     <Compile Include="..\build\FierceShower\RustyFist.cs">
       <Link>RustyFist.cs</Link>
     </Compile>
+    <Compile Include="..\build\FierceShower\TouchSink.cs">
+      <Link>TouchSink.cs</Link>
+    </Compile>
+    <Compile Include="..\build\FierceShower\Touch.cs">
+      <Link>Touch.cs</Link>
+    </Compile>
+    <Compile Include="..\build\FierceShower\VectorTouch.cs">
+      <Link>VectorTouch.cs</Link>
+    </Compile>
+    <Compile Include="..\build\FierceShower\MousePos.cs">
+      <Link>MousePos.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
