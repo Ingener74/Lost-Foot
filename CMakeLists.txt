@@ -14,6 +14,8 @@ include_directories(
 add_definitions(-std=c++11)
 add_definitions(-DLINUX)
 
+add_subdirectory(RustyGL)
+
 add_subdirectory(RustyFist)
 
 add_subdirectory(FierceShower)

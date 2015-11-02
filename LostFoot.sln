@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetRow", "PlanetRow\PlanetRow.csproj", "{07820FD3-14DE-40CB-952F-429D9EE87B2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WesternCobra", "WesternCobra\WesternCobra.csproj", "{3A448A34-A017-4641-8F05-BE70360D58DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlidingDagger", "..\..\workspace\Jupiter\apps\Ananke\SlidingDagger\SlidingDagger.csproj", "{F225C673-E9B0-4611-917C-0337C3C3AC49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -17,6 +21,14 @@ Global
 		{07820FD3-14DE-40CB-952F-429D9EE87B2F}.Debug|x86.Build.0 = Debug|Any CPU
 		{07820FD3-14DE-40CB-952F-429D9EE87B2F}.Release|x86.ActiveCfg = Release|Any CPU
 		{07820FD3-14DE-40CB-952F-429D9EE87B2F}.Release|x86.Build.0 = Release|Any CPU
+		{3A448A34-A017-4641-8F05-BE70360D58DC}.Debug|x86.ActiveCfg = Debug|x86
+		{3A448A34-A017-4641-8F05-BE70360D58DC}.Debug|x86.Build.0 = Debug|x86
+		{3A448A34-A017-4641-8F05-BE70360D58DC}.Release|x86.ActiveCfg = Release|x86
+		{3A448A34-A017-4641-8F05-BE70360D58DC}.Release|x86.Build.0 = Release|x86
+		{F225C673-E9B0-4611-917C-0337C3C3AC49}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F225C673-E9B0-4611-917C-0337C3C3AC49}.Debug|x86.Build.0 = Debug|Any CPU
+		{F225C673-E9B0-4611-917C-0337C3C3AC49}.Release|x86.ActiveCfg = Release|Any CPU
+		{F225C673-E9B0-4611-917C-0337C3C3AC49}.Release|x86.Build.0 = Release|Any CPU
 		{FAED4949-4A15-4F75-8106-8A9628FEFAF5}.Debug|x86.ActiveCfg = Debug|x86
 		{FAED4949-4A15-4F75-8106-8A9628FEFAF5}.Debug|x86.Build.0 = Debug|x86
 		{FAED4949-4A15-4F75-8106-8A9628FEFAF5}.Release|x86.ActiveCfg = Release|x86

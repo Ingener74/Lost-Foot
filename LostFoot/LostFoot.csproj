@@ -33,11 +33,20 @@
   <ItemGroup>
     <Compile Include="MainClass.cs" />
     <Compile Include="CSharpGameLogicImpl.cs" />
+    <Compile Include="CSharpLayerImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PlanetRow\PlanetRow.csproj">
       <Project>{07820FD3-14DE-40CB-952F-429D9EE87B2F}</Project>
       <Name>PlanetRow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WesternCobra\WesternCobra.csproj">
+      <Project>{3A448A34-A017-4641-8F05-BE70360D58DC}</Project>
+      <Name>WesternCobra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\workspace\Jupiter\apps\Ananke\SlidingDagger\SlidingDagger.csproj">
+      <Project>{F225C673-E9B0-4611-917C-0337C3C3AC49}</Project>
+      <Name>SlidingDagger</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

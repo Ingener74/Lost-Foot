@@ -22,7 +22,6 @@ public:
 private:
     GameLogic* _gameLogic = nullptr;
     DrawMe* _drawMe = nullptr;
-    TestIntPtr* _testIntPtr = nullptr;
 };
 
 #endif // _APP_DELEGATE_H_

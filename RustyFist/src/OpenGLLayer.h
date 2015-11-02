@@ -31,4 +31,9 @@ private:
 	DrawMe* _drawMe = nullptr;
 };
 
+inline void OpenGLLayer::setDrawMe(DrawMe* drawMe)
+{
+	_drawMe = drawMe;
+}
+
 #endif /* RUSTYFIST_SRC_OPENGLLAYER_H_ */

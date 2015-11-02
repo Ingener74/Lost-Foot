@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{3A448A34-A017-4641-8F05-BE70360D58DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WesternCobra</RootNamespace>
+    <AssemblyName>WesternCobra</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\build\RustyGL\RustyGL.cs">
+      <Link>RustyGL.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\RustyGLPINVOKE.cs">
+      <Link>RustyGLPINVOKE.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\SWIGTYPE_p_double.cs">
+      <Link>SWIGTYPE_p_double.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\SWIGTYPE_p_float.cs">
+      <Link>SWIGTYPE_p_float.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\SWIGTYPE_p_int.cs">
+      <Link>SWIGTYPE_p_int.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\SWIGTYPE_p_p_void.cs">
+      <Link>SWIGTYPE_p_p_void.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\SWIGTYPE_p_short.cs">
+      <Link>SWIGTYPE_p_short.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\SWIGTYPE_p_signed_char.cs">
+      <Link>SWIGTYPE_p_signed_char.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\SWIGTYPE_p_unsigned_char.cs">
+      <Link>SWIGTYPE_p_unsigned_char.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\SWIGTYPE_p_unsigned_int.cs">
+      <Link>SWIGTYPE_p_unsigned_int.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\SWIGTYPE_p_unsigned_short.cs">
+      <Link>SWIGTYPE_p_unsigned_short.cs</Link>
+    </Compile>
+    <Compile Include="..\build\RustyGL\SWIGTYPE_p_void.cs">
+      <Link>SWIGTYPE_p_void.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

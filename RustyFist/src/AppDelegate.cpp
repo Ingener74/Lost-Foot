@@ -28,29 +28,6 @@ void AppDelegate::initGLContextAttrs() {
     GLView::setGLContextAttrs(glContextAttrs);
 }
 
-class ImplTestIntPtr: public TestIntPtr
-{
-public:
-	ImplTestIntPtr()
-	{
-	}
-	virtual ~ImplTestIntPtr()
-	{
-	}
-	virtual void * getContext()
-	{
-		GLFWwindow* context = glfwGetCurrentContext();
-		cout << "out context " << context << endl;
-		return context;
-	}
-	virtual void * getAddress(const std::string& name)
-	{
-		void* procAddress = reinterpret_cast<void*>(glfwGetProcAddress(name.c_str()));
-		cout << procAddress << " GetProcAddress for " << name << endl;
-		return procAddress;
-	}
-};
-
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
     auto director = Director::getInstance();
@@ -129,9 +106,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // run
     director->runWithScene(scene);
 
-	_testIntPtr = new ImplTestIntPtr;
 	if (_drawMe)
-		_drawMe->init(_testIntPtr);
+		_drawMe->init();
 
     return true;
 }
